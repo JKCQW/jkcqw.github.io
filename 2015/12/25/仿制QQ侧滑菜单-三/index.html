@@ -51,23 +51,20 @@
 
 
 
-<meta name="description" content="本文中，我们将一起使用 UINavigationController 来管理主视图，并实现点击左视图中菜单时，主视图自动联动的功能。本文是本系列文章的终结篇，也是最有难度的一篇，我已经为此编写了 10 小时的代码，前八小时一直在试错。毕竟我只是一个只有三个多月 iOS 开发经验的新手 (～ o ～)Y
-给主视图装上 NavigationBar给 HomeViewController 增加 UINa">
+<meta name="description" content="本文中，我们将一起使用 UINavigationController 来管理主视图，并实现点击左视图中菜单时，主视图自动联动的功能。本文是本系列文章的终结篇，也是最有难度的一篇，我已经为此编写了 10 小时的代码，前八小时一直在试错。毕竟我只是一个只有三个多月 iOS 开发经验的新手 (～ o ～)Y">
 <meta property="og:type" content="article">
 <meta property="og:title" content="仿制QQ侧滑菜单<三>">
 <meta property="og:url" content="http://yoursite.com/2015/12/25/仿制QQ侧滑菜单-三/index.html">
 <meta property="og:site_name" content="Z's Blogs">
-<meta property="og:description" content="本文中，我们将一起使用 UINavigationController 来管理主视图，并实现点击左视图中菜单时，主视图自动联动的功能。本文是本系列文章的终结篇，也是最有难度的一篇，我已经为此编写了 10 小时的代码，前八小时一直在试错。毕竟我只是一个只有三个多月 iOS 开发经验的新手 (～ o ～)Y
-给主视图装上 NavigationBar给 HomeViewController 增加 UINa">
+<meta property="og:description" content="本文中，我们将一起使用 UINavigationController 来管理主视图，并实现点击左视图中菜单时，主视图自动联动的功能。本文是本系列文章的终结篇，也是最有难度的一篇，我已经为此编写了 10 小时的代码，前八小时一直在试错。毕竟我只是一个只有三个多月 iOS 开发经验的新手 (～ o ～)Y">
 <meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225154831033_640.jpg?1920x1010_120">
 <meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225154805028_640.jpg?1041x721_120">
 <meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225155004086_640.jpg?1051x888_120">
 <meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225154739012_640.jpg?380x639_110">
-<meta property="og:updated_time" content="2015-12-25T08:04:54.000Z">
+<meta property="og:updated_time" content="2015-12-25T08:08:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="仿制QQ侧滑菜单<三>">
-<meta name="twitter:description" content="本文中，我们将一起使用 UINavigationController 来管理主视图，并实现点击左视图中菜单时，主视图自动联动的功能。本文是本系列文章的终结篇，也是最有难度的一篇，我已经为此编写了 10 小时的代码，前八小时一直在试错。毕竟我只是一个只有三个多月 iOS 开发经验的新手 (～ o ～)Y
-给主视图装上 NavigationBar给 HomeViewController 增加 UINa">
+<meta name="twitter:description" content="本文中，我们将一起使用 UINavigationController 来管理主视图，并实现点击左视图中菜单时，主视图自动联动的功能。本文是本系列文章的终结篇，也是最有难度的一篇，我已经为此编写了 10 小时的代码，前八小时一直在试错。毕竟我只是一个只有三个多月 iOS 开发经验的新手 (～ o ～)Y">
 
 
 
@@ -295,7 +292,7 @@
       
 
       
-        <span itemprop="articleBody"><p><strong>本文中，我们将一起使用 UINavigationController 来管理主视图，并实现点击左视图中菜单时，主视图自动联动的功能。本文是本系列文章的终结篇，也是最有难度的一篇，我已经为此编写了 10 小时的代码，前八小时一直在试错。毕竟我只是一个只有三个多月 iOS 开发经验的新手 (～ o ～)Y</strong></p>
+        <span itemprop="articleBody"><p><strong>本文中，我们将一起使用 UINavigationController 来管理主视图，并实现点击左视图中菜单时，主视图自动联动的功能。本文是本系列文章的终结篇，也是最有难度的一篇，我已经为此编写了 10 小时的代码，前八小时一直在试错。毕竟我只是一个只有三个多月 iOS 开发经验的新手 (～ o ～)Y</strong><br><a id="more"></a></p>
 <h2 id="u7ED9_u4E3B_u89C6_u56FE_u88C5_u4E0A_NavigationBar"><a href="#u7ED9_u4E3B_u89C6_u56FE_u88C5_u4E0A_NavigationBar" class="headerlink" title="给主视图装上 NavigationBar"></a>给主视图装上 NavigationBar</h2><h3 id="u7ED9_HomeViewController__u589E_u52A0_UINavigationController__u7236_u89C6_u56FE"><a href="#u7ED9_HomeViewController__u589E_u52A0_UINavigationController__u7236_u89C6_u56FE" class="headerlink" title="给 HomeViewController 增加 UINavigationController 父视图"></a>给 HomeViewController 增加 UINavigationController 父视图</h3><h5 id="u64CD_u4F5C_u5982_u4E0B_u56FE_uFF1A"><a href="#u64CD_u4F5C_u5982_u4E0B_u56FE_uFF1A" class="headerlink" title="操作如下图："></a>操作如下图：</h5><p><img src="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225154831033_640.jpg?1920x1010_120" alt="1 jpg"></p>
 <h3 id="u4FEE_u6539_u4E3B_u89C6_u56FE_u8F7D_u5165_u903B_u8F91"><a href="#u4FEE_u6539_u4E3B_u89C6_u56FE_u8F7D_u5165_u903B_u8F91" class="headerlink" title="修改主视图载入逻辑"></a>修改主视图载入逻辑</h3><ul>
 <li>使用一个 UIView 对象将 homeViewController.navigationController!.view 和 homeViewController.view 包裹，再加入 self.view。</li>
