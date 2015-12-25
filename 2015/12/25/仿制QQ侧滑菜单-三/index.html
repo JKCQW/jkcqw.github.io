@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="QQ,Xcode,iOS," />
 
 
 
@@ -51,15 +51,23 @@
 
 
 
-<meta name="description" content="Sometimes bad guys makes the best good guys.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Z's Blogs">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="本文中，我们将一起使用 UINavigationController 来管理主视图，并实现点击左视图中菜单时，主视图自动联动的功能。本文是本系列文章的终结篇，也是最有难度的一篇，我已经为此编写了 10 小时的代码，前八小时一直在试错。毕竟我只是一个只有三个多月 iOS 开发经验的新手 (～ o ～)Y
+给主视图装上 NavigationBar给 HomeViewController 增加 UINa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="仿制QQ侧滑菜单<三>">
+<meta property="og:url" content="http://yoursite.com/2015/12/25/仿制QQ侧滑菜单-三/index.html">
 <meta property="og:site_name" content="Z's Blogs">
-<meta property="og:description" content="Sometimes bad guys makes the best good guys.">
+<meta property="og:description" content="本文中，我们将一起使用 UINavigationController 来管理主视图，并实现点击左视图中菜单时，主视图自动联动的功能。本文是本系列文章的终结篇，也是最有难度的一篇，我已经为此编写了 10 小时的代码，前八小时一直在试错。毕竟我只是一个只有三个多月 iOS 开发经验的新手 (～ o ～)Y
+给主视图装上 NavigationBar给 HomeViewController 增加 UINa">
+<meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225154831033_640.jpg?1920x1010_120">
+<meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225154805028_640.jpg?1041x721_120">
+<meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225155004086_640.jpg?1051x888_120">
+<meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225154739012_640.jpg?380x639_110">
+<meta property="og:updated_time" content="2015-12-25T08:04:54.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Z's Blogs">
-<meta name="twitter:description" content="Sometimes bad guys makes the best good guys.">
+<meta name="twitter:title" content="仿制QQ侧滑菜单<三>">
+<meta name="twitter:description" content="本文中，我们将一起使用 UINavigationController 来管理主视图，并实现点击左视图中菜单时，主视图自动联动的功能。本文是本系列文章的终结篇，也是最有难度的一篇，我已经为此编写了 10 小时的代码，前八小时一直在试错。毕竟我只是一个只有三个多月 iOS 开发经验的新手 (～ o ～)Y
+给主视图装上 NavigationBar给 HomeViewController 增加 UINa">
 
 
 
@@ -71,7 +79,7 @@
   };
 </script>
 
-  <title> Z's Blogs </title>
+  <title> 仿制QQ侧滑菜单<三> | Z's Blogs </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -92,9 +100,7 @@
 
 
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -212,15 +218,9 @@
       <div class="main-inner">
         <div id="content" class="content">
           
-  <section id="posts" class="posts-expand">
 
+  <div id="posts" class="posts-expand">
     
-
-    
-    
-
-    
-      
 
   
   
@@ -240,10 +240,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2015/12/25/仿制QQ侧滑菜单-三/" itemprop="url">
-                  仿制QQ侧滑菜单<三>
-                </a>
+                仿制QQ侧滑菜单<三>
               
             
           </h1>
@@ -298,10 +295,7 @@
       
 
       
-        
-          <span itemprop="articleBody">
-            
-              <p><strong>本文中，我们将一起使用 UINavigationController 来管理主视图，并实现点击左视图中菜单时，主视图自动联动的功能。本文是本系列文章的终结篇，也是最有难度的一篇，我已经为此编写了 10 小时的代码，前八小时一直在试错。毕竟我只是一个只有三个多月 iOS 开发经验的新手 (～ o ～)Y</strong></p>
+        <span itemprop="articleBody"><p><strong>本文中，我们将一起使用 UINavigationController 来管理主视图，并实现点击左视图中菜单时，主视图自动联动的功能。本文是本系列文章的终结篇，也是最有难度的一篇，我已经为此编写了 10 小时的代码，前八小时一直在试错。毕竟我只是一个只有三个多月 iOS 开发经验的新手 (～ o ～)Y</strong></p>
 <h2 id="u7ED9_u4E3B_u89C6_u56FE_u88C5_u4E0A_NavigationBar"><a href="#u7ED9_u4E3B_u89C6_u56FE_u88C5_u4E0A_NavigationBar" class="headerlink" title="给主视图装上 NavigationBar"></a>给主视图装上 NavigationBar</h2><h3 id="u7ED9_HomeViewController__u589E_u52A0_UINavigationController__u7236_u89C6_u56FE"><a href="#u7ED9_HomeViewController__u589E_u52A0_UINavigationController__u7236_u89C6_u56FE" class="headerlink" title="给 HomeViewController 增加 UINavigationController 父视图"></a>给 HomeViewController 增加 UINavigationController 父视图</h3><h5 id="u64CD_u4F5C_u5982_u4E0B_u56FE_uFF1A"><a href="#u64CD_u4F5C_u5982_u4E0B_u56FE_uFF1A" class="headerlink" title="操作如下图："></a>操作如下图：</h5><p><img src="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225154831033_640.jpg?1920x1010_120" alt="1 jpg"></p>
 <h3 id="u4FEE_u6539_u4E3B_u89C6_u56FE_u8F7D_u5165_u903B_u8F91"><a href="#u4FEE_u6539_u4E3B_u89C6_u56FE_u8F7D_u5165_u903B_u8F91" class="headerlink" title="修改主视图载入逻辑"></a>修改主视图载入逻辑</h3><ul>
 <li>使用一个 UIView 对象将 homeViewController.navigationController!.view 和 homeViewController.view 包裹，再加入 self.view。</li>
@@ -328,454 +322,69 @@
 <h3 id="u4FEE_u6B63_OtherPageViewController__u4E2D_u8FD4_u56DE_u6309_u94AE_u4E0D_u80FD_u6B63_u5E38_u76F8_u5E94_u7684_u95EE_u9898"><a href="#u4FEE_u6B63_OtherPageViewController__u4E2D_u8FD4_u56DE_u6309_u94AE_u4E0D_u80FD_u6B63_u5E38_u76F8_u5E94_u7684_u95EE_u9898" class="headerlink" title="修正 OtherPageViewController 中返回按钮不能正常相应的问题"></a>修正 OtherPageViewController 中返回按钮不能正常相应的问题</h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">override</span> <span class="func"><span class="keyword">func</span> <span class="title">viewDidLoad</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">super</span>.viewDidLoad()</span><br><span class="line"></span><br><span class="line">    <span class="keyword">self</span>.title = <span class="type">PageTitle</span></span><br><span class="line">    mainLabel.text = <span class="type">PageTitle</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 自定义返回按钮</span></span><br><span class="line">    <span class="keyword">let</span> backButton = <span class="type">UIBarButtonItem</span>(title: <span class="string">"く返回"</span>, style: <span class="type">UIBarButtonItemStyle</span>.<span class="type">Plain</span>, target: <span class="keyword">self</span>, action: <span class="string">"goBack"</span>)</span><br><span class="line">    <span class="keyword">self</span>.navigationItem.leftBarButtonItem = backButton</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 弥补因为返回按钮被替换导致的边缘滑入手势失效的问题</span></span><br><span class="line">    <span class="keyword">let</span> gesture = <span class="type">UIPanGestureRecognizer</span>(target: <span class="keyword">self</span>, action: <span class="string">"goBack"</span>)</span><br><span class="line">    <span class="keyword">self</span>.view.addGestureRecognizer(gesture)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="func"><span class="keyword">func</span> <span class="title">goBack</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="keyword">self</span>.navigationController?.popViewControllerAnimated(<span class="literal">true</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="u67E5_u770B_u6548_u679C"><a href="#u67E5_u770B_u6548_u679C" class="headerlink" title="查看效果"></a>查看效果</h2><p><img src="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225154739012_640.jpg?380x639_110" alt="4 gif"></p>
 <h2 id="u300A_u4EFF_u5236QQ_u4FA7_u6ED1_u83DC_u5355_u300B_u7CFB_u5217_u6587_u7AE0_u5230_u6B64_u7ED3_u675F_uFF0C_u8C22_u8C22_uFF01"><a href="#u300A_u4EFF_u5236QQ_u4FA7_u6ED1_u83DC_u5355_u300B_u7CFB_u5217_u6587_u7AE0_u5230_u6B64_u7ED3_u675F_uFF0C_u8C22_u8C22_uFF01" class="headerlink" title="《仿制QQ侧滑菜单》系列文章到此结束，谢谢！"></a>《仿制QQ侧滑菜单》系列文章到此结束，谢谢！</h2><h5 id="u5199_u5728_u6700_u540E_uFF1A"><a href="#u5199_u5728_u6700_u540E_uFF1A" class="headerlink" title="写在最后："></a>写在最后：</h5><h5 id="u672C_u6587_u7684_u9879_u76EE_u5DF2_u7ECF_u6258_u7BA1_u5728Github_2C_u8BF7_u521A_u95EE_u4F5C_u8005@JohnLui_u7684Github"><a href="#u672C_u6587_u7684_u9879_u76EE_u5DF2_u7ECF_u6258_u7BA1_u5728Github_2C_u8BF7_u521A_u95EE_u4F5C_u8005@JohnLui_u7684Github" class="headerlink" title="本文的项目已经托管在Github,请刚问作者@JohnLui的Github"></a>本文的项目已经托管在Github,请刚问作者@JohnLui的Github</h5><p><a href="https://github.com/johnlui/SwiftSideslipLikeQQ" target="_blank" rel="external">https://github.com/johnlui/SwiftSideslipLikeQQ</a></p>
-
-            
-          </span>
-        
+</span>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/25/仿制QQ侧滑菜单-二/" itemprop="url">
-                  仿制QQ侧滑菜单<二>
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-25T15:09:04+08:00" content="2015-12-25">
-              2015-12-25
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS软件开发/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS软件开发</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
+            <a href="/tags/QQ/" rel="tag">#QQ</a>
           
-
+            <a href="/tags/Xcode/" rel="tag">#Xcode</a>
           
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/25/仿制QQ侧滑菜单-二/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/25/仿制QQ侧滑菜单-二/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
+            <a href="/tags/iOS/" rel="tag">#iOS</a>
           
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
       
 
       
-        
-          <p>文章转自<a href="https://lvwenhan.com/ios/446.html">岁寒-@JohnLui</a>个人<a href="https://github.com/johnlui">Github</a></p>
-<p><strong>本篇文章中，我们将一起使用 Auto Layout 高仿手Q的左侧视图，力争达成从布局到动画的全面类似。由于实现过程繁复，本文将主要讲述思路和心得体会，将不再大段大段地粘贴代码。</strong><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/25/仿制QQ侧滑菜单-二/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/25/仿制QQ侧滑菜单-二/" rel="next" title="仿制QQ侧滑菜单<二>">
+                <i class="fa fa-chevron-left"></i> 仿制QQ侧滑菜单<二>
+              </a>
+            
           </div>
-        
-      
-    </div>
 
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/25/仿制QQ侧滑菜单/" itemprop="url">
-                  仿制QQ侧滑菜单<一>
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-25T14:12:28+08:00" content="2015-12-25">
-              2015-12-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS软件开发/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS软件开发</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/25/仿制QQ侧滑菜单/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/25/仿制QQ侧滑菜单/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>文章转自<a href="https://lvwenhan.com/ios/445.html">岁寒-@JohnLui</a>个人<a href="https://github.com/johnlui">Github</a></p>
-<p><strong>本系列文章中，我们将尝试再造手机QQ的侧滑菜单，力争最大限度接近手Q的实际效果，并使用 Auto Layout 仿造左侧菜单，实现和主视图的联动。</strong><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/25/仿制QQ侧滑菜单/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/24/Marry-Christmas/" itemprop="url">
-                  Marry Christmas
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-24T10:05:35+08:00" content="2015-12-24">
-              2015-12-24
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/24/Marry-Christmas/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/24/Marry-Christmas/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
       
 
       
-        
-          <p><img src="http://image17-c.poco.cn/mypoco/myphoto/20151225/14/17867745020151225140937080_640.jpg?500x200_120" alt="2.jpg"></p>
-<p>当圣洁的雪花飘落<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/24/Marry-Christmas/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/23/Star-all-over-again/" itemprop="url">
-                  Star all over again
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-23T11:55:25+08:00" content="2015-12-23">
-              2015-12-23
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/23/Star-all-over-again/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/23/Star-all-over-again/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>推倒从前，从”心”开始<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/23/Star-all-over-again/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+    <div class="post-spread">
       
     </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-
-  </section>
-
-  
+  </div>
 
 
         </div>
 
         
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
         
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/12/25/仿制QQ侧滑菜单-三/"
+           data-title="仿制QQ侧滑菜单<三>" data-url="http://yoursite.com/2015/12/25/仿制QQ侧滑菜单-三/">
+      </div>
+    
+  </div>
+
 
       </div>
 
@@ -796,8 +405,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" src="http://a3.qpic.cn/psb?/e144c2d8-be6b-4627-9983-2cb6aaf77760/TGuWPOoSAk3shCK9sCKFE2qMdr4D.fXKW7dq.G2ho6o!/b/dKEAAAAAAAAA&bo=yADIAAAAAAABByA!&rf=viewer_4" alt="张鹏鹏" itemprop="image"/>
           <p class="site-author-name" itemprop="name">张鹏鹏</p>
@@ -875,6 +493,23 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#u7ED9_u4E3B_u89C6_u56FE_u88C5_u4E0A_NavigationBar"><span class="nav-number">1.</span> <span class="nav-text">给主视图装上 NavigationBar</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u7ED9_HomeViewController__u589E_u52A0_UINavigationController__u7236_u89C6_u56FE"><span class="nav-number">1.1.</span> <span class="nav-text">给 HomeViewController 增加 UINavigationController 父视图</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#u64CD_u4F5C_u5982_u4E0B_u56FE_uFF1A"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">操作如下图：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4FEE_u6539_u4E3B_u89C6_u56FE_u8F7D_u5165_u903B_u8F91"><span class="nav-number">1.2.</span> <span class="nav-text">修改主视图载入逻辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7ED9_mainView__u8D4B_u4E88_u62D6_u52A8_u624B_u52BF_u4E8B_u4EF6"><span class="nav-number">1.3.</span> <span class="nav-text">给 mainView 赋予拖动手势事件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4FEE_u6539_u81EA_u52A8_u5F52_u4F4D_u52A8_u753B"><span class="nav-number">1.4.</span> <span class="nav-text">修改自动归位动画</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u5F97_u76CA_u4E8E_u4E4B_u524D_u826F_u597D_u7684_u5C01_u88C5_uFF0C_u5B89_u88C5_NavigationBar__u7684_u5DE5_u4F5C_u5DF2_u7ECF_u5B8C_u6210"><span class="nav-number">1.5.</span> <span class="nav-text">得益于之前良好的封装，安装 NavigationBar 的工作已经完成</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u5B9E_u73B0_u8054_u52A8"><span class="nav-number">2.</span> <span class="nav-text">实现联动</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u5EFA_u7ACB_HomeViewController__u7684_u5B50_u89C6_u56FE_u63A7_u5236_u5668"><span class="nav-number">2.1.</span> <span class="nav-text">建立 HomeViewController 的子视图控制器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4F7F_u7528_segue__u8FDE_u63A5_HomeViewController__u548C_OtherPageViewController"><span class="nav-number">2.2.</span> <span class="nav-text">使用 segue 连接 HomeViewController 和 OtherPageViewController</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4FEE_u6539_HomeViewController_uFF0C_u4F20_u9012_u6570_u636E"><span class="nav-number">2.3.</span> <span class="nav-text">修改 HomeViewController，传递数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u89C6_u56FE_u8054_u52A8_u5DF2_u7ECF_u5B9E_u73B0_uFF01"><span class="nav-number">2.4.</span> <span class="nav-text">视图联动已经实现！</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u6536_u5C3E_u5DE5_u4F5C"><span class="nav-number">3.</span> <span class="nav-text">收尾工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#u8BBE_u7F6E_segmentView"><span class="nav-number">3.1.</span> <span class="nav-text">设置 segmentView</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7ED9_NavigationBar__u7684_u5DE6_u4FA7_u5934_u50CF_u548C_u53F3_u4FA7_u661F_u661F_u589E_u52A0_u5355_u51FB_u6253_u5F00_u5DE6_u3001_u53F3_u89C6_u56FE_u7684_u529F_u80FD"><span class="nav-number">3.2.</span> <span class="nav-text">给 NavigationBar 的左侧头像和右侧星星增加单击打开左、右视图的功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u7ED9_u4E3B_u89C6_u56FE_u589E_u52A0_u70B9_u51FB_u4F1A_u4E3B_u89C6_u56FE_u529F_u80FD_uFF1A"><span class="nav-number">3.3.</span> <span class="nav-text">给主视图增加点击会主视图功能：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#u4FEE_u6B63_OtherPageViewController__u4E2D_u8FD4_u56DE_u6309_u94AE_u4E0D_u80FD_u6B63_u5E38_u76F8_u5E94_u7684_u95EE_u9898"><span class="nav-number">3.4.</span> <span class="nav-text">修正 OtherPageViewController 中返回按钮不能正常相应的问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u67E5_u770B_u6548_u679C"><span class="nav-number">4.</span> <span class="nav-text">查看效果</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#u300A_u4EFF_u5236QQ_u4FA7_u6ED1_u83DC_u5355_u300B_u7CFB_u5217_u6587_u7AE0_u5230_u6B64_u7ED3_u675F_uFF0C_u8C22_u8C22_uFF01"><span class="nav-number">5.</span> <span class="nav-text">《仿制QQ侧滑菜单》系列文章到此结束，谢谢！</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#u5199_u5728_u6700_u540E_uFF1A"><span class="nav-number">5.0.0.1.</span> <span class="nav-text">写在最后：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#u672C_u6587_u7684_u9879_u76EE_u5DF2_u7ECF_u6258_u7BA1_u5728Github_2C_u8BF7_u521A_u95EE_u4F5C_u8005@JohnLui_u7684Github"><span class="nav-number">5.0.0.2.</span> <span class="nav-text">本文的项目已经托管在Github,请刚问作者@JohnLui的Github</span></a></li></ol></li></ol></li></ol></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
       
 
     </div>
@@ -962,6 +597,167 @@
   <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
 
   <script type="text/javascript" src="/js/bootstrap.js"></script>
 
