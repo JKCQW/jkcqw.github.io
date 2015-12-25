@@ -52,19 +52,13 @@
 
 
 <meta name="description" content="文章转自岁寒-@JohnLui个人Github
-本篇文章中，我们将一起使用 Auto Layout 高仿手Q的左侧视图，力争达成从布局到动画的全面类似。由于实现过程繁复，本文将主要讲述思路和心得体会，将不再大段大段地粘贴代码。
-手Q左视图的展现方式细部动画仔细观察，在把主页往右拖动时，左侧菜单有一个平移和放大的结合动画，并且有一层黑色遮罩层，透明度在不断变化，如下图：
-
-适配逻辑我对比了 4 寸屏">
+本篇文章中，我们将一起使用 Auto Layout 高仿手Q的左侧视图，力争达成从布局到动画的全面类似。由于实现过程繁复，本文将主要讲述思路和心得体会，将不再大段大段地粘贴代码。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="仿制QQ侧滑菜单<二>">
 <meta property="og:url" content="http://yoursite.com/2015/12/25/仿制QQ侧滑菜单-二/index.html">
 <meta property="og:site_name" content="Z's Blogs">
 <meta property="og:description" content="文章转自岁寒-@JohnLui个人Github
-本篇文章中，我们将一起使用 Auto Layout 高仿手Q的左侧视图，力争达成从布局到动画的全面类似。由于实现过程繁复，本文将主要讲述思路和心得体会，将不再大段大段地粘贴代码。
-手Q左视图的展现方式细部动画仔细观察，在把主页往右拖动时，左侧菜单有一个平移和放大的结合动画，并且有一层黑色遮罩层，透明度在不断变化，如下图：
-
-适配逻辑我对比了 4 寸屏">
+本篇文章中，我们将一起使用 Auto Layout 高仿手Q的左侧视图，力争达成从布局到动画的全面类似。由于实现过程繁复，本文将主要讲述思路和心得体会，将不再大段大段地粘贴代码。">
 <meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225151304035_640.jpg?640x1136_130">
 <meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225151717054_640.jpg?640x1136_130">
 <meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20151225/14/17867745020151225143230073_640.jpg?750x1334_130">
@@ -74,14 +68,11 @@
 <meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225152348020_640.jpg?320x590_120">
 <meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225152243089_640.jpg?375x689_120">
 <meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225152001044_640.jpg?414x758_120">
-<meta property="og:updated_time" content="2015-12-25T07:37:25.000Z">
+<meta property="og:updated_time" content="2015-12-25T07:41:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="仿制QQ侧滑菜单<二>">
 <meta name="twitter:description" content="文章转自岁寒-@JohnLui个人Github
-本篇文章中，我们将一起使用 Auto Layout 高仿手Q的左侧视图，力争达成从布局到动画的全面类似。由于实现过程繁复，本文将主要讲述思路和心得体会，将不再大段大段地粘贴代码。
-手Q左视图的展现方式细部动画仔细观察，在把主页往右拖动时，左侧菜单有一个平移和放大的结合动画，并且有一层黑色遮罩层，透明度在不断变化，如下图：
-
-适配逻辑我对比了 4 寸屏">
+本篇文章中，我们将一起使用 Auto Layout 高仿手Q的左侧视图，力争达成从布局到动画的全面类似。由于实现过程繁复，本文将主要讲述思路和心得体会，将不再大段大段地粘贴代码。">
 
 
 
@@ -310,7 +301,7 @@
 
       
         <span itemprop="articleBody"><p>文章转自<a href="https://lvwenhan.com/ios/446.html" target="_blank" rel="external">岁寒-@JohnLui</a>个人<a href="https://github.com/johnlui" target="_blank" rel="external">Github</a></p>
-<p><strong>本篇文章中，我们将一起使用 Auto Layout 高仿手Q的左侧视图，力争达成从布局到动画的全面类似。由于实现过程繁复，本文将主要讲述思路和心得体会，将不再大段大段地粘贴代码。</strong></p>
+<p><strong>本篇文章中，我们将一起使用 Auto Layout 高仿手Q的左侧视图，力争达成从布局到动画的全面类似。由于实现过程繁复，本文将主要讲述思路和心得体会，将不再大段大段地粘贴代码。</strong><br><a id="more"></a></p>
 <h2 id="u624BQ_u5DE6_u89C6_u56FE_u7684_u5C55_u73B0_u65B9_u5F0F"><a href="#u624BQ_u5DE6_u89C6_u56FE_u7684_u5C55_u73B0_u65B9_u5F0F" class="headerlink" title="手Q左视图的展现方式"></a>手Q左视图的展现方式</h2><h3 id="u7EC6_u90E8_u52A8_u753B"><a href="#u7EC6_u90E8_u52A8_u753B" class="headerlink" title="细部动画"></a>细部动画</h3><p>仔细观察，在把主页往右拖动时，左侧菜单有一个平移和放大的结合动画，并且有一层黑色遮罩层，透明度在不断变化，如下图：</p>
 <p><img src="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225151304035_640.jpg?640x1136_130" alt="1 jpg"></p>
 <h3 id="u9002_u914D_u903B_u8F91"><a href="#u9002_u914D_u903B_u8F91" class="headerlink" title="适配逻辑"></a>适配逻辑</h3><p>我对比了 4 寸屏幕和 4.7 寸屏幕上的左视图，很明点的一点是，4.7 寸屏幕上的元素尺寸和字体都比 4 寸屏幕上的大一点，并且有明显的模糊，故手Q采用的应该是 4 寸以上屏幕等比放大的方案。</p>

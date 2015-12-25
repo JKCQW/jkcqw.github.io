@@ -299,45 +299,13 @@
 
       
         
-          <span itemprop="articleBody">
-            
-              <p>文章转自<a href="https://lvwenhan.com/ios/446.html" target="_blank" rel="external">岁寒-@JohnLui</a>个人<a href="https://github.com/johnlui" target="_blank" rel="external">Github</a></p>
-<p><strong>本篇文章中，我们将一起使用 Auto Layout 高仿手Q的左侧视图，力争达成从布局到动画的全面类似。由于实现过程繁复，本文将主要讲述思路和心得体会，将不再大段大段地粘贴代码。</strong></p>
-<h2 id="u624BQ_u5DE6_u89C6_u56FE_u7684_u5C55_u73B0_u65B9_u5F0F"><a href="#u624BQ_u5DE6_u89C6_u56FE_u7684_u5C55_u73B0_u65B9_u5F0F" class="headerlink" title="手Q左视图的展现方式"></a>手Q左视图的展现方式</h2><h3 id="u7EC6_u90E8_u52A8_u753B"><a href="#u7EC6_u90E8_u52A8_u753B" class="headerlink" title="细部动画"></a>细部动画</h3><p>仔细观察，在把主页往右拖动时，左侧菜单有一个平移和放大的结合动画，并且有一层黑色遮罩层，透明度在不断变化，如下图：</p>
-<p><img src="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225151304035_640.jpg?640x1136_130" alt="1 jpg"></p>
-<h3 id="u9002_u914D_u903B_u8F91"><a href="#u9002_u914D_u903B_u8F91" class="headerlink" title="适配逻辑"></a>适配逻辑</h3><p>我对比了 4 寸屏幕和 4.7 寸屏幕上的左视图，很明点的一点是，4.7 寸屏幕上的元素尺寸和字体都比 4 寸屏幕上的大一点，并且有明显的模糊，故手Q采用的应该是 4 寸以上屏幕等比放大的方案。</p>
-<p>对比图如下：</p>
-<p>4 寸</p>
-<p><img src="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225151717054_640.jpg?640x1136_130" alt="2 jpg"></p>
-<p>4.7 寸</p>
-<p><img src="http://image17-c.poco.cn/mypoco/myphoto/20151225/14/17867745020151225143230073_640.jpg?750x1334_130" alt="3 jpg"></p>
-<h2 id="u5F00_u59CB_u4EFF_u5236"><a href="#u5F00_u59CB_u4EFF_u5236" class="headerlink" title="开始仿制"></a>开始仿制</h2><p>弄明白手Q的实现细节之后，我们就开始着手实现界面及功能了。</p>
-<h3 id="u4F7F_u7528_StoryBoard__u6784_u9020_u5DE6_u89C6_u56FE"><a href="#u4F7F_u7528_StoryBoard__u6784_u9020_u5DE6_u89C6_u56FE" class="headerlink" title="使用 StoryBoard 构造左视图"></a>使用 StoryBoard 构造左视图</h3><p>在 StoryBoard 中新增一个 View Controller，并新增一个名为 LeftViewController 的 UIViewController 类，并在 StoryBoard 中完成绑定。然后搭建出左视图的界面，并使用 Auto Layout 进行完全约束。</p>
-<p><strong>注：</strong></p>
-<ul>
-<li><p>不熟悉 Auto Layout 的同学可以阅读<a href="https://lvwenhan.com/ios/430.html" target="_blank" rel="external">《Auto Layout 使用心得》</a>系列文章。</p>
-</li>
-<li><p>在普通 UIViewController 中使用 UITableView 的方法请看：<a href="https://lvwenhan.com/ios/429.html" target="_blank" rel="external">《如何在普通 UIViewController 中使用 UITableView》</a></p>
-</li>
-</ul>
-<p>效果图如下：<br><img src="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225151932052_640.jpg?637x660_120" alt="4 jpg"></p>
-<p>上图中我为了能够显示出白色的字把 LeftViewController 主 view 的背景调成了绿色，默认使用 Default 即可（透明色）。</p>
-<h3 id="u53D6_u51FA_u5DE6_u89C6_u56FE_u5E76_u589E_u52A0_u906E_u7F69_u5C42"><a href="#u53D6_u51FA_u5DE6_u89C6_u56FE_u5E76_u589E_u52A0_u906E_u7F69_u5C42" class="headerlink" title="取出左视图并增加遮罩层"></a>取出左视图并增加遮罩层</h3><p>这里有一点心得体会：为了保证 LeftViewController 中各类事件的正常相应，需要给 ViewController 增加成员变量（对象）：</p>
-<pre><code>var leftViewController: LeftViewController!
-</code></pre><p>这跟<a href="https://lvwenhan.com/ios/439.html" target="_blank" rel="external">《AVAudioPlayer 如何在页面呈现之后按需初始化》</a>中提出的解决方案是一个道理。</p>
-<p>完善跟左视图有关的动画代码，过于繁复请大家直接参考项目代码，此处不再表述：</p>
-<h2 id="u67E5_u770B_u6548_u679C"><a href="#u67E5_u770B_u6548_u679C" class="headerlink" title="查看效果"></a>查看效果</h2><h3 id="u52A8_u753B_u6548_u679C"><a href="#u52A8_u753B_u6548_u679C" class="headerlink" title="动画效果"></a>动画效果</h3><p><img src="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225150624065_640.jpg?435x726_110" alt="5 gif"></p>
-<h3 id="u9002_u914D_u6027"><a href="#u9002_u914D_u6027" class="headerlink" title="适配性"></a>适配性</h3><p>3.5 寸</p>
-<p><img src="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225150554097_640.jpg?320x502_120" alt="6 jpg"></p>
-<p>4.0 寸</p>
-<p><img src="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225152348020_640.jpg?320x590_120" alt="7 jpg"></p>
-<p>4.7 寸</p>
-<p><img src="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225152243089_640.jpg?375x689_120" alt="8 jpg"></p>
-<p>5.5 寸</p>
-<p><img src="http://image17-c.poco.cn/mypoco/myphoto/20151225/15/17867745020151225152001044_640.jpg?414x758_120" alt="9 jpg"></p>
-
-            
-          </span>
+          <p>文章转自<a href="https://lvwenhan.com/ios/446.html">岁寒-@JohnLui</a>个人<a href="https://github.com/johnlui">Github</a></p>
+<p><strong>本篇文章中，我们将一起使用 Auto Layout 高仿手Q的左侧视图，力争达成从布局到动画的全面类似。由于实现过程繁复，本文将主要讲述思路和心得体会，将不再大段大段地粘贴代码。</strong><br>
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2015/12/25/仿制QQ侧滑菜单-二/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
