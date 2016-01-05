@@ -35,7 +35,7 @@
 <link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="iOS开发," />
 
 
 
@@ -51,15 +51,26 @@
 
 
 
-<meta name="description" content="Sometimes bad guys makes the best good guys.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Z's Blogs">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="转载自OPEN经验库-iOS程序框架设计之皮肤切换功能
+一、引言移动应用的开发中，有时我们会需要例如更换皮肤此类的功能，andorid采用xml配置UI的方式，这个问题或许还容易解决些，iOS的主要UI逻辑则是在代码中控制的，如果没有一个强大的框架方案，这个问题将变得非常棘手。网上也有很多诸如此类功能的优秀案例与框架，在这篇博客中，我与大家分享下我的解决方案，其中如果有不恰或者糟糕之处，希望与高人">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS开发-App主题皮肤切换功能">
+<meta property="og:url" content="http://yoursite.com/2016/01/04/iOS开发-App主题皮肤切换功能/index.html">
 <meta property="og:site_name" content="Z's Blogs">
-<meta property="og:description" content="Sometimes bad guys makes the best good guys.">
+<meta property="og:description" content="转载自OPEN经验库-iOS程序框架设计之皮肤切换功能
+一、引言移动应用的开发中，有时我们会需要例如更换皮肤此类的功能，andorid采用xml配置UI的方式，这个问题或许还容易解决些，iOS的主要UI逻辑则是在代码中控制的，如果没有一个强大的框架方案，这个问题将变得非常棘手。网上也有很多诸如此类功能的优秀案例与框架，在这篇博客中，我与大家分享下我的解决方案，其中如果有不恰或者糟糕之处，希望与高人">
+<meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20160105/15/17867745020160105152826073_640.jpg?1366x768_120">
+<meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20160105/15/17867745020160105153516064_640.jpg?150x267_120">
+<meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20160105/15/17867745020160105153544081_640.jpg?150x282_120">
+<meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20160105/15/17867745020160105153443045_640.jpg?150x267_120">
+<meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20160105/15/17867745020160105153809071_640.jpg?150x268_120">
+<meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20160105/15/17867745020160105153740088_640.jpg?150x268_120">
+<meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20160105/15/17867745020160105153836061_640.jpg?150x266_120">
+<meta property="og:updated_time" content="2016-01-05T07:46:27.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Z's Blogs">
-<meta name="twitter:description" content="Sometimes bad guys makes the best good guys.">
+<meta name="twitter:title" content="iOS开发-App主题皮肤切换功能">
+<meta name="twitter:description" content="转载自OPEN经验库-iOS程序框架设计之皮肤切换功能
+一、引言移动应用的开发中，有时我们会需要例如更换皮肤此类的功能，andorid采用xml配置UI的方式，这个问题或许还容易解决些，iOS的主要UI逻辑则是在代码中控制的，如果没有一个强大的框架方案，这个问题将变得非常棘手。网上也有很多诸如此类功能的优秀案例与框架，在这篇博客中，我与大家分享下我的解决方案，其中如果有不恰或者糟糕之处，希望与高人">
 
 
 
@@ -71,7 +82,7 @@
   };
 </script>
 
-  <title> Z's Blogs </title>
+  <title> iOS开发-App主题皮肤切换功能 | Z's Blogs </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -92,9 +103,7 @@
 
 
 
-  <div class="container one-column 
-   page-home 
-">
+  <div class="container one-column page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -212,15 +221,9 @@
       <div class="main-inner">
         <div id="content" class="content">
           
-  <section id="posts" class="posts-expand">
 
+  <div id="posts" class="posts-expand">
     
-
-    
-    
-
-    
-      
 
   
   
@@ -240,10 +243,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/01/04/iOS开发-App主题皮肤切换功能/" itemprop="url">
-                  iOS开发-App主题皮肤切换功能
-                </a>
+                iOS开发-App主题皮肤切换功能
               
             
           </h1>
@@ -283,10 +283,7 @@
       
 
       
-        
-          <span itemprop="articleBody">
-            
-              <p><strong>转载自<a href="http://www.open-open.com/lib/view/open1440396933685.html" target="_blank" rel="external">OPEN经验库-iOS程序框架设计之皮肤切换功能</a></strong></p>
+        <span itemprop="articleBody"><p><strong>转载自<a href="http://www.open-open.com/lib/view/open1440396933685.html" target="_blank" rel="external">OPEN经验库-iOS程序框架设计之皮肤切换功能</a></strong></p>
 <h4 id="u4E00_u3001_u5F15_u8A00"><a href="#u4E00_u3001_u5F15_u8A00" class="headerlink" title="一、引言"></a>一、引言</h4><p>移动应用的开发中，有时我们会需要例如更换皮肤此类的功能，andorid采用xml配置UI的方式，这个问题或许还容易解决些，iOS的主要UI逻辑则是在代码中控制的，如果没有一个强大的框架方案，这个问题将变得非常棘手。网上也有很多诸如此类功能的优秀案例与框架，在这篇博客中，我与大家分享下我的解决方案，其中如果有不恰或者糟糕之处，希望与高人一起交流。</p>
 <h4 id="u4E8C_u3001_u8BBE_u8BA1_u601D_u8DEF_u4E0E_u6846_u67B6"><a href="#u4E8C_u3001_u8BBE_u8BA1_u601D_u8DEF_u4E0E_u6846_u67B6" class="headerlink" title="二、设计思路与框架"></a>二、设计思路与框架</h4><p>首先我的设计思路是采用通知的方式，原理可以如下理解为以下几步：</p>
 <ul>
@@ -320,647 +317,65 @@
 <p><img src="http://image17-c.poco.cn/mypoco/myphoto/20160105/15/17867745020160105153809071_640.jpg?150x268_120" alt="效果图4 JPG"> <img src="http://image17-c.poco.cn/mypoco/myphoto/20160105/15/17867745020160105153740088_640.jpg?150x268_120" alt="效果图5 JPG"> <img src="http://image17-c.poco.cn/mypoco/myphoto/20160105/15/17867745020160105153836061_640.jpg?150x266_120" alt="效果图6 JPG"></p>
 <h4 id="u4E09_u3001_u8865_u5145"><a href="#u4E09_u3001_u8865_u5145" class="headerlink" title="三、补充"></a>三、补充</h4><p>自己的思路实现更换主题的一种方法，真诚的想与志同道合的朋友交流开发经验，如果你想批评，点拨，交流或者是借鉴我的代码，Q316045346随时欢迎。</p>
 <p>来自：<a href="http://my.oschina.net/u/2340880/blog/495670" target="_blank" rel="external">http://my.oschina.net/u/2340880/blog/495670</a></p>
-
-            
-          </span>
-        
+</span>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/01/03/元旦/" itemprop="url">
-                  元旦
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2016-01-03T09:10:50+08:00" content="2016-01-03">
-              2016-01-03
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/iOS开发/" rel="tag">#iOS开发</a>
           
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/01/03/元旦/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/01/03/元旦/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
       
 
       
-        
-          <p><img src="http://image17-c.poco.cn/mypoco/myphoto/20160103/09/17867745020160103091459030_640.jpg?600x349_120" alt="元旦 jpg"></p>
-<h3 id="u5143_u65E6"><a href="#u5143_u65E6" class="headerlink" title="元旦"></a>元旦</h3>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/01/03/元旦/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/01/03/元旦/" rel="next" title="元旦">
+                <i class="fa fa-chevron-left"></i> 元旦
+              </a>
+            
           </div>
-        
-      
-    </div>
 
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/25/仿制QQ侧滑菜单-三/" itemprop="url">
-                  仿制QQ侧滑菜单<三>
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-25T15:45:14+08:00" content="2015-12-25">
-              2015-12-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS软件开发/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS软件开发</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/25/仿制QQ侧滑菜单-三/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/25/仿制QQ侧滑菜单-三/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>文章转自<a href="https://lvwenhan.com/ios/446.html">岁寒-@JohnLui</a>个人<a href="https://github.com/johnlui">Github</a></p>
-<p><strong>本文中，我们将一起使用 UINavigationController 来管理主视图，并实现点击左视图中菜单时，主视图自动联动的功能。本文是本系列文章的终结篇，也是最有难度的一篇，我已经为此编写了 10 小时的代码，前八小时一直在试错。毕竟我只是一个只有三个多月 iOS 开发经验的新手 (～ o ～)Y</strong><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/25/仿制QQ侧滑菜单-三/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
           </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/25/仿制QQ侧滑菜单-二/" itemprop="url">
-                  仿制QQ侧滑菜单<二>
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-25T15:09:04+08:00" content="2015-12-25">
-              2015-12-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS软件开发/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS软件开发</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/25/仿制QQ侧滑菜单-二/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/25/仿制QQ侧滑菜单-二/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
         </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
       
 
       
-        
-          <p>文章转自<a href="https://lvwenhan.com/ios/446.html">岁寒-@JohnLui</a>个人<a href="https://github.com/johnlui">Github</a></p>
-<p><strong>本篇文章中，我们将一起使用 Auto Layout 高仿手Q的左侧视图，力争达成从布局到动画的全面类似。由于实现过程繁复，本文将主要讲述思路和心得体会，将不再大段大段地粘贴代码。</strong><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/25/仿制QQ侧滑菜单-二/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/25/仿制QQ侧滑菜单/" itemprop="url">
-                  仿制QQ侧滑菜单<一>
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-25T14:12:28+08:00" content="2015-12-25">
-              2015-12-25
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/iOS软件开发/" itemprop="url" rel="index">
-                    <span itemprop="name">iOS软件开发</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/25/仿制QQ侧滑菜单/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/25/仿制QQ侧滑菜单/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>文章转自<a href="https://lvwenhan.com/ios/445.html">岁寒-@JohnLui</a>个人<a href="https://github.com/johnlui">Github</a></p>
-<p><strong>本系列文章中，我们将尝试再造手机QQ的侧滑菜单，力争最大限度接近手Q的实际效果，并使用 Auto Layout 仿造左侧菜单，实现和主视图的联动。</strong><br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/25/仿制QQ侧滑菜单/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+    <div class="post-spread">
       
     </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/24/Marry-Christmas/" itemprop="url">
-                  Marry Christmas
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-24T10:05:35+08:00" content="2015-12-24">
-              2015-12-24
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/24/Marry-Christmas/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/24/Marry-Christmas/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p><img src="http://image17-c.poco.cn/mypoco/myphoto/20151225/14/17867745020151225140937080_640.jpg?500x200_120" alt="2.jpg"></p>
-<p>当圣洁的雪花飘落<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/24/Marry-Christmas/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/23/Star-all-over-again/" itemprop="url">
-                  Star all over again
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            发表于
-            <time itemprop="dateCreated" datetime="2015-12-23T11:55:25+08:00" content="2015-12-23">
-              2015-12-23
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分类于
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/随笔/" itemprop="url" rel="index">
-                    <span itemprop="name">随笔</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/23/Star-all-over-again/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/23/Star-all-over-again/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body">
-
-      
-      
-
-      
-        
-          <p>推倒从前，从”心”开始<br>
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/23/Star-all-over-again/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-
-  </section>
-
-  
+  </div>
 
 
         </div>
 
         
 
+  <p>热评文章</p>
+  <div class="ds-top-threads" data-range="weekly" data-num-items="4"></div>
+
 
         
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/01/04/iOS开发-App主题皮肤切换功能/"
+           data-title="iOS开发-App主题皮肤切换功能" data-url="http://yoursite.com/2016/01/04/iOS开发-App主题皮肤切换功能/">
+      </div>
+    
+  </div>
+
 
       </div>
 
@@ -981,8 +396,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" src="http://image17-c.poco.cn/mypoco/myphoto/20151226/09/17861027920151226092308071_640.jpg?200x200_120" alt="张鹏鹏" itemprop="image"/>
           <p class="site-author-name" itemprop="name">张鹏鹏</p>
@@ -1060,6 +484,23 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#u4E00_u3001_u5F15_u8A00"><span class="nav-number">1.</span> <span class="nav-text">一、引言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4E8C_u3001_u8BBE_u8BA1_u601D_u8DEF_u4E0E_u6846_u67B6"><span class="nav-number">2.</span> <span class="nav-text">二、设计思路与框架</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u4E09_u3001_u8865_u5145"><span class="nav-number">3.</span> <span class="nav-text">三、补充</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
       
 
     </div>
@@ -1147,6 +588,167 @@
   <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
 
   
+  
+<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
+
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    motionMiddleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+      if (CONFIG.sidebar === 'post') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
 
   <script type="text/javascript" src="/js/bootstrap.js"></script>
 
