@@ -66,7 +66,7 @@
 <meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20160105/15/17867745020160105153809071_640.jpg?150x268_120">
 <meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20160105/15/17867745020160105153740088_640.jpg?150x268_120">
 <meta property="og:image" content="http://image17-c.poco.cn/mypoco/myphoto/20160105/15/17867745020160105153836061_640.jpg?150x266_120">
-<meta property="og:updated_time" content="2016-01-05T07:46:27.000Z">
+<meta property="og:updated_time" content="2016-01-05T07:49:13.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="iOS开发-App主题皮肤切换功能">
 <meta name="twitter:description" content="转载自OPEN经验库-iOS程序框架设计之皮肤切换功能
@@ -284,7 +284,7 @@
 
       
         <span itemprop="articleBody"><p><strong>转载自<a href="http://www.open-open.com/lib/view/open1440396933685.html" target="_blank" rel="external">OPEN经验库-iOS程序框架设计之皮肤切换功能</a></strong></p>
-<h4 id="u4E00_u3001_u5F15_u8A00"><a href="#u4E00_u3001_u5F15_u8A00" class="headerlink" title="一、引言"></a>一、引言</h4><p>移动应用的开发中，有时我们会需要例如更换皮肤此类的功能，andorid采用xml配置UI的方式，这个问题或许还容易解决些，iOS的主要UI逻辑则是在代码中控制的，如果没有一个强大的框架方案，这个问题将变得非常棘手。网上也有很多诸如此类功能的优秀案例与框架，在这篇博客中，我与大家分享下我的解决方案，其中如果有不恰或者糟糕之处，希望与高人一起交流。</p>
+<h4 id="u4E00_u3001_u5F15_u8A00"><a href="#u4E00_u3001_u5F15_u8A00" class="headerlink" title="一、引言"></a>一、引言</h4><p>移动应用的开发中，有时我们会需要例如更换皮肤此类的功能，andorid采用xml配置UI的方式，这个问题或许还容易解决些，iOS的主要UI逻辑则是在代码中控制的，如果没有一个强大的框架方案，这个问题将变得非常棘手。网上也有很多诸如此类功能的优秀案例与框架，在这篇博客中，我与大家分享下我的解决方案，其中如果有不恰或者糟糕之处，希望与高人一起交流。<br><a id="more"></a></p>
 <h4 id="u4E8C_u3001_u8BBE_u8BA1_u601D_u8DEF_u4E0E_u6846_u67B6"><a href="#u4E8C_u3001_u8BBE_u8BA1_u601D_u8DEF_u4E0E_u6846_u67B6" class="headerlink" title="二、设计思路与框架"></a>二、设计思路与框架</h4><p>首先我的设计思路是采用通知的方式，原理可以如下理解为以下几步：</p>
 <ul>
 <li><p>在系统的通知中心注册一个通知</p>
